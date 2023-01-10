@@ -10,26 +10,26 @@
             function computadoraAleatorio(min, max) {
                 return Math.floor(Math.random() * (max - min + 1) + min)
             }
+
+            function eleccion(jugador, texto) {
+                let resultado = ""
+                if (jugador == 1) {
+                    resultado = texto + " ✊"
+                } else if (jugador == 2) {
+                    resultado = texto + " ✋"
+                } else if (jugador == 3) {
+                    resultado = texto + " ✌"
+                } else {
+                    resultado = "Elige un número válido"
+                }
+                return resultado
+            }
             let computadora = computadoraAleatorio(min, max)
             console.log(computadora, "avrr")
             jugador = prompt("Elige: 1 para piedra, 2 para papel y 3 para tijera, buena suerte!")
-            if (jugador == 1) {
-                alert("Elegiste ✊")
-            } else if (jugador == 2) {
-                alert("Elegiste ✋")
-            } else if (jugador == 3) {
-                alert("Elegiste ✌")
-            } else {
-                alert("Elige un número válido")
-            }
 
-            if (computadora === 1) {
-                alert("Compu escogió ✊")
-            } else if (computadora === 2) {
-                alert("Compu escogió ✋")
-            } else {
-                alert("Compu escogió ✌")
-            }
+            alert(eleccion(computadora, "Compu escogió"))
+            alert(eleccion(jugador, "Elegiste"))
 
             //Combate!
 
