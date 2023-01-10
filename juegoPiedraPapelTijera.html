@@ -5,7 +5,13 @@
         <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
         <script>
             let jugador = 0
-            let computadora = 0
+            let min = 1
+            let max = 3
+            function computadoraAleatorio(min, max) {
+                return Math.floor(Math.random() * (max - min + 1) + min)
+            }
+            let computadora = computadoraAleatorio(min, max)
+            console.log(computadora, "avrr")
             jugador = prompt("Elige: 1 para piedra, 2 para papel y 3 para tijera, buena suerte!")
             if (jugador == 1) {
                 alert("Elegiste ✊")
