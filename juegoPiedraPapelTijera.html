@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Mi juego de piedra, papel y tijera</title>
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <script>
+            let jugador = 0
+            let computadora = 0
+            jugador = prompt("Elige: 1 para piedra, 2 para papel y 3 para tijera, buena suerte!")
+            if (jugador == 1) {
+                alert("Elegiste ✊")
+            } else if (jugador == 2) {
+                alert("Elegiste ✋")
+            } else if (jugador == 3) {
+                alert("Elegiste ✌")
+            } else {
+                alert("Elige un número válido")
+            }
+
+            if (computadora === 1) {
+                alert("Compu escogió ✊")
+            } else if (computadora === 2) {
+                alert("Compu escogió ✋")
+            } else {
+                alert("Compu escogió ✌")
+            }
+
+            //Combate!
+
+            if (jugador == computadora) {
+                alert("Vaya... Ha sido un empate!")
+            } else if ((jugador - computadora) == -2 || (jugador - computadora) == 1) {
+                alert("Que buena suerte! Haz ganado!")
+            } else {
+                alert("Será para la próxima... Haz perdido")
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
