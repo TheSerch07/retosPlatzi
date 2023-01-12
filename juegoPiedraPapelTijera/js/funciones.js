@@ -25,9 +25,9 @@ function eleccion(jugador, texto) {
 }  
 
 while(victorias < 3 && derrotas < 3) {
-    console.log(victorias + "mis victorias")
+    // console.log(victorias + "mis victorias")
     computadora = computadoraAleatorio(min, max)
-    console.log(computadora, "avrr")
+    // console.log(computadora, "avrr")
     jugador = prompt("Elige: 1 para piedra, 2 para papel y 3 para tijera, buena suerte!")
 
     alert(eleccion(computadora, "Compu escogió"))
